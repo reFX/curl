@@ -26,6 +26,10 @@
 
 #ifdef USE_WEBSOCKETS
 
+#if defined(WIN32) || defined(_WIN32)
+#define sleep(sec) Sleep ((sec)*1000)
+#endif
+
 static int ping(CURL *curl, const char *send_payload)
 {
   size_t sent;
