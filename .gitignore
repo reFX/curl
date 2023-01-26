@@ -2,6 +2,7 @@
 #
 # SPDX-License-Identifier: curl
 
+.DS_Store
 *.asc
 *.dll
 *.exe
