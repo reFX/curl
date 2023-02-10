@@ -801,9 +801,8 @@ if(CURL_USE_LIBPSL)
   endif()
 endif()
 
-set (CURL_USE_LIBSSH2 ON)
-set (USE_LIBSSH2 ON)
-list(APPEND CURL_LIBS libssh2)
+set (CURL_USE_LIBSSH2 OFF)
+set (USE_LIBSSH2 OFF)
 
 #libSSH2
 # option(CURL_USE_LIBSSH2 "Use libSSH2" ON)
