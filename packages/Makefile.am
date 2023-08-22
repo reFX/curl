@@ -25,9 +25,9 @@ SUBDIRS = vms
 
 EXTRA_DIST = README.md \
   OS400/README.OS400 \
+  OS400/rpg-examples \
   OS400/ccsidcurl.c \
   OS400/ccsidcurl.h \
-  OS400/chkstrings.c \
   OS400/curl.inc.in \
   OS400/initscript.sh \
   OS400/make-include.sh \

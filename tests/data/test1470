@@ -6,6 +6,7 @@ HTTP
 HTTP GET
 SOCKS5
 SOCKS5h
+unix sockets
 </keywords>
 </info>
 
@@ -34,7 +35,6 @@ Funny-head: yesyes
 <features>
 proxy
 unix-sockets
-!NSS
 </features>
 <server>
 https

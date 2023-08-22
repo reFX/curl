@@ -36,6 +36,7 @@ uint32_t arc4random(void);
 #endif
 
 #include <curl/curl.h>
+#include "urldata.h"
 #include "vtls/vtls.h"
 #include "sendf.h"
 #include "timeval.h"
@@ -183,11 +184,11 @@ static CURLcode randit(struct Curl_easy *data, unsigned int *rnd)
 }
 
 /*
- * Curl_rand() stores 'num' number of random unsigned integers in the buffer
- * 'rndptr' points to.
+ * Curl_rand() stores 'num' number of random unsigned characters in the buffer
+ * 'rnd' points to.
  *
  * If libcurl is built without TLS support or with a TLS backend that lacks a
- * proper random API (rustls, Gskit or mbedTLS), this function will use "weak"
+ * proper random API (rustls or mbedTLS), this function will use "weak"
  * random.
  *
  * When built *with* TLS support and a backend that offers strong random, it

@@ -37,6 +37,9 @@
 #include <stdio.h>
 
 static const char *disabled[]={
+#ifdef CURL_DISABLE_BINDLOCAL
+  "bindlocal",
+#endif
 #ifdef CURL_DISABLE_COOKIES
   "cookies",
 #endif
@@ -78,6 +81,12 @@ static const char *disabled[]={
 #endif
 #ifndef USE_XATTR
   "xattr",
+#endif
+#ifdef CURL_DISABLE_FORM_API
+  "form-api",
+#endif
+#if (SIZEOF_TIME_T < 5)
+  "large-time",
 #endif
   NULL
 };
